@@ -4,6 +4,8 @@
     </app-add-task>
     <app-list-tasks
         [tasks]="tasks"
+        (remove)="removeTask($event)"
+        (toggle)="toggleDone($event)"
     >
 
     </app-list-tasks

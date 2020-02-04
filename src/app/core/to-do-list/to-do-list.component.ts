@@ -32,4 +32,19 @@ export class ToDoListComponent implements OnInit {
   ngOnInit() {
   }
 
+  public removeTask(id: string | number): void {
+    this.tasks = this.tasks.filter((task: Task) => task.id !== id); //filter повертає новий масив
+  }
+
+  public toggleDone(id: string | number): void {
+    const index: number = this.tasks.findIndex(task => task.id === id);
+    // if(index >= 0) {
+    //   this.tasks[index].isDone = !this.tasks[index].isDone
+    // }
+    if(index < 0) {
+      return;
+    }
+    this.tasks[index].isDone = !this.tasks[index].isDone
+  }
+
 }

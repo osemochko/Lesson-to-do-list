@@ -14,9 +14,13 @@ public tasks: Task[];
 @Output()
 public remove: EventEmitter<string | number>
 
+@Output()
+public toggle: EventEmitter<string | number>
+
   constructor() {
     this.tasks = [];
     this.remove = new EventEmitter();
+    this.toggle = new EventEmitter();
    }
 
   ngOnInit() {
@@ -25,7 +29,11 @@ public remove: EventEmitter<string | number>
   }
 
 public removeTask(id: string | number): void {
-  //...magic
+  this.remove.emit(id);
+}
+
+public toggleDone(id: string | number): void {
+  this.toggle.emit(id);
 }
 
 }
