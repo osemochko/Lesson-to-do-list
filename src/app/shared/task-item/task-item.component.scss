@@ -1,0 +1,17 @@
+.task-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    width: 100%;
+
+    .title{
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+
+.done{
+    text-decoration: line-through;
+}

@@ -1,0 +1,17 @@
+<div class="task-item">
+    <span 
+    class="title"
+    [class.done]="task.isDone"
+    (click)="toggleDone()"
+    >
+        {{task.title}}
+    </span>
+
+    <button
+    mat-mini-fab color="warn"
+    (click)="removeTask"
+    >
+        X
+    </button
+    >
+</div>
